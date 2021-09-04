@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_4</title>
+</head>
+
+<body>
+    <script>
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function (text) {
+            this.text = text;
+        }
+
+        let newPost = new Post('Ray Bradbury', 'It was a pleasure to burn', new Date());
+        console.log(newPost);
+        newPost.edit('Part I');
+        console.log(newPost);
+
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function () {
+            this.highlighted = true;
+        }
+
+        let newAttached = new AttachedPost('Christopher Tolkien', 'Ainulindale', new Date());
+        console.log(newAttached);
+        newAttached.makeTextHighlighted();
+        newAttached.edit('Silmarillion');
+        console.log(newAttached);
+
+    </script>
+</body>
+
+</html>
