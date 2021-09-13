@@ -1,0 +1,37 @@
+<!-- Задание. Обратитесь к элементу с классом .mt-0 и получите его родителя - элемент с
+    классом .media-body. -->
+
+<script>
+    'use strict';
+    let mt0El = document.querySelector('.mt-0');
+    console.log(mt0El.parentNode);
+</script>
+<!-- Задание. Добавьте в div c помощью appendChild следующую разметку:
+    <h3>hello world</h3>
+    -->
+
+<script>
+    'use strict';
+    let div = document.querySelector('div');
+    let h3 = document.createElement('h3');
+    h3.innerText = 'hello world';
+    div.appendChild(h3);
+</script>
+<!-- Задание. 
+    1. Найдите элемент с классом .btn-outline-warning и удалите его.
+    2. Аналогичным образом удалите элемент с классом .btn-outline-dark -->
+
+<script>
+    'use strict';
+    let btnWarn = document.querySelector('.btn-outline-warning');
+    btnWarn.remove();
+    let btnDark = document.querySelector('.btn-outline-dark');
+    btnDark.remove();
+</script>
+<!-- Задание. Найдите кнопку с классом .btn-info и сделайте текст в кнопке: "Кнопка".-->
+
+<script>
+    'use strict';
+    let btn = document.querySelector('.btn-info');
+    btn.innerText = 'Кнопка';
+</script>
