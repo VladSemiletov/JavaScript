@@ -1,0 +1,65 @@
+<!-- Задание. Найдите тег ul. И добавьте ему класс one. -->
+
+<script>
+    'use strict';
+    let ul = document.querySelector('ul');
+    ul.classList.add('one');
+</script>
+
+<!-- Задание. Найдите элемент с классом .nav-link и используя метод toggle из свойства classList
+    у элемента, добавьте или уберите класс .active. -->
+
+<script>
+    'use strict';
+    let navLinkEl = document.querySelector('.nav-link');
+    navLinkEl.classList.toggle('active');
+</script>
+
+<!-- Задание. Найдите элемент с классом .dropdown-menu и удалите этот класс, используя свойство
+    classList у элемента, и метод remove(). -->
+
+<script>
+    'use strict';
+    let menuEl = document.querySelector('.dropdown-menu');
+    menuEl.classList.remove('dropdown-menu');
+</script>
+
+<!-- Задание. Добавьте в div с классом .menu следующую разметку:
+    <a href="#">link</a>
+    используя метод insertAdjacentHTML.
+    -->
+
+<script>
+    'use strict';
+    let div = document.querySelector('.menu');
+    div.insertAdjacentHTML('afterbegin', '<a href="#">link</a>');
+</script>
+
+<!-- Задание. Выведите в консоль значение атрибутов data-dismiss
+    и aria-label с помощью метода getAttribute. -->
+
+<script>
+    'use strict';
+    let button = document.querySelector('button');
+    console.log(button.getAttribute('data-dismiss'));
+    console.log(button.getAttribute('aria-label'));
+</script>
+
+<!-- Задание. Добавьте заголовку атрибут data-one="один" и атрибут
+    data-two="два" с помощью метода setAttribute. -->
+
+<script>
+    'use strict';
+    let h1 = document.querySelector('h1');
+    h1.setAttribute('data-one', 'один');
+    h1.setAttribute('data-two', 'два');
+</script>
+
+<!-- Задание. найдите заголовок с id="title" и замените значение id
+    на что-то другое. -->
+
+<script>
+    'use strict';
+    let header = document.getElementById('title');
+    header.id = 'newValue';
+</script>
