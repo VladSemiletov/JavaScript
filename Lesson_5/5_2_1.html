@@ -1,0 +1,127 @@
+<!-- Задание. 
+    1. Сохраните в переменную коллекцию с картинками.
+    2. Пробегитесь по этой коллекции с помощью цикла или forEach
+    и выведите каждую картинку в консоль. Выведите в консоль только
+	элементы коллекции, не нужно пытаться сделать, чтобы в консоли
+	появилось изображение. -->
+
+<script>
+    'use strict';
+    let images = document.querySelectorAll('img');
+    images.forEach(function (image) {
+        console.log(image);
+    });
+</script>
+
+<!-- Задание.
+    1. Сохраните в переменную коллекцию элементов с классом one. Для получения
+    элементов используйте метод. getElementsByClassName() 
+    2. С помощью цикла переберите эту коллекцию и выведите в консоль название тега.
+    -->
+
+<script>
+    'use strict';
+    let one_class = document.getElementsByClassName('one');
+    for (let i = 0; i < one_class.length; i++) {
+        console.log(one_class[i].tagName);
+    }
+</script>
+
+<!-- Задание.
+    1. Сохраните в переменную коллекцию с тегами h2, используйте метод getElementsByTagName()
+    2. Пробегитесь по этой коллекции с помощью цикла и выведите в консоль значение
+    атрибута class, используя свойство className.
+    -->
+
+<script>
+    'use strict';
+    let h2_tags = document.getElementsByTagName('h2');
+    for (let i = 0; i < h2_tags.length; i++) {
+        console.log(h2_tags[i].className);
+    }
+</script>
+
+<!-- Задание.
+    1. Сохраните в переменную тег div.
+    2. Создайте переменную classes, и в нее сохраните значение свойства classList.
+    3. C помощью forEach переберите classes и выведите каждый класс в консоль.
+     -->
+
+<script>
+    'use strict';
+    let div = document.querySelector('div');
+    let classes = div.classList;
+    classes.forEach(function (klass) {
+        console.log(klass);
+    });
+</script>
+
+<!-- Задание.
+    1. Вам нужно получить этот div.
+    2. Затем обратитесь к списку классов и с помощью метода contains()
+    проверьте есть ли класс hidden у этого тега.
+     -->
+
+<script>
+    'use strict';
+    let div = document.querySelector('div');
+    console.log(div.classList.contains('hidden'));
+</script>
+
+<!-- Задание.
+    1. Найдите все "карточки" с классом .card.
+    2. Проверьте есть ли у карточки класс hidden с помощью метода contains(),
+    и если есть, то удалите с помощью метода remove(). -->
+
+<script>
+    'use strict';
+    let card_class = document.querySelectorAll('.card');
+    card_class.forEach(function (card) {
+        if (card.classList.contains('hidden')) {
+            card.classList.remove('hidden');
+        }
+    });
+</script>
+
+<!-- Задание.
+    1. Получите все ссылки.
+    2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
+
+<script>
+    'use strict';
+    for (let i = 0; i < document.links.length; i++) {
+        if (document.links[i].innerText !== 'ссылка') {
+            document.links[i].innerText = 'ссылка';
+        }
+    }
+</script>
+
+<!-- Задание.
+    1. Получите все теги b.
+    2. С помощью метода contains() из classList, проверьте, есть ли у тега
+    класс sign, и если нет, то тогда добавьте с помощью метода add()
+    -->
+
+<script>
+    'use strict';
+    let b_tags = document.querySelectorAll('b');
+    b_tags.forEach(function (b) {
+        if (!b.classList.contains('sign')) {
+            b.classList.add('sign');
+        }
+    });
+</script>
+
+<!-- Задание.
+    1. Получите коллекцию тегов i.
+    2. Пробегитесь по этой коллекции и с помощью classList.toggle() сделайте,
+    чтобы где класс green есть, его не стало, а где нету, чтобы появился.
+    -->
+
+<script>
+    'use strict';
+    let i_tags = document.querySelectorAll('i');
+    i_tags.forEach(function (i) {
+        i.classList.toggle('green');
+    });
+</script>
